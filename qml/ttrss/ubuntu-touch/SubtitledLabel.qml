@@ -10,7 +10,7 @@
 //in /usr/share/common-licenses. If not, see http://www.gnu.org/licenses/.
 
 import QtQuick 2.0
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: root
@@ -26,15 +26,15 @@ Item {
     anchors.left: parent.left
     anchors.right: parent.right
 
-    /* FIXME This duplicate UbuntuShape is a workaround for
+    /* FIXME This duplicate LomiriShape is a workaround for
      https://launchpad.net/bugs/1396104 */
-    UbuntuShape {
+    LomiriShape {
         id: backgroundShape
         anchors.fill: iconShape
         visible: iconShape.visible
     }
 
-    UbuntuShape {
+    LomiriShape {
         id: iconShape
         anchors.left: parent.left
         anchors.verticalCenter: parent.verticalCenter

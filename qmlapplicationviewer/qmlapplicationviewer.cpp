@@ -13,9 +13,9 @@
 #include <QtCore/QDir>
 #include <QtCore/QFileInfo>
 #include <QtGui/QApplication>
-#include <QtDeclarative/QDeclarativeComponent>
-#include <QtDeclarative/QDeclarativeEngine>
-#include <QtDeclarative/QDeclarativeContext>
+#include <QQmlComponent>
+#include <QQmlEngine>
+#include <QQmlContext>
 
 #include <qplatformdefs.h> // MEEGO_EDITION_HARMATTAN
 
