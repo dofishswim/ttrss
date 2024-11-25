@@ -10,6 +10,7 @@ DEFINES += TARGET=\\\"it.mardy.ttrss\\\"
 QT += quick qml
 
 CLICK_DIR = $${OUT_PWD}/click
+CLICK_DIR = ../../../../..
 CLICK_ARCH = $$system("dpkg-architecture -qDEB_HOST_ARCH")
 BUILD_ARCH = $$system("dpkg-architecture -qDEB_BUILD_ARCH")
 
@@ -37,17 +38,17 @@ icon.files = ubuntu/ttrss_icon_256.png
 icon.path = $${CLICK_DIR}
 INSTALLS += icon
 
-QMAKE_SUBSTITUTES += ubuntu/ttrss.desktop.in
-desktop.files = ubuntu/ttrss.desktop
+QMAKE_SUBSTITUTES += ttrss.desktop.in
+desktop.files = ttrss.desktop
 desktop.path = $${CLICK_DIR}
 INSTALLS += desktop
 
-apparmor.files = ubuntu/ttrss.json
+apparmor.files = ttrss.json
 apparmor.path = $${CLICK_DIR}
 INSTALLS += apparmor
 
-QMAKE_SUBSTITUTES += ubuntu/manifest.json.in
-manifest.files = ubuntu/manifest.json
+QMAKE_SUBSTITUTES += manifest.json.in
+manifest.files = manifest.json
 manifest.path = $${CLICK_DIR}
 INSTALLS += manifest
 
@@ -92,6 +93,10 @@ equals(CLICK_ARCH, $${BUILD_ARCH}) {
 #qm.CONFIG += no_check_exist
 
 #INSTALLS += qm
+
+last.files = $${CLICK_DIR}/*
+last.path = $${INSTALL_ROOT}
+#INSTALLS += last
 
 TRANSLATIONS += i18n/qml-translation.cs.ts \
     i18n/qml-translation.de.ts \

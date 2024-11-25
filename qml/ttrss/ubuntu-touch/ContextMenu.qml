@@ -10,10 +10,10 @@
 //in /usr/share/common-licenses. If not, see http://www.gnu.org/licenses/.
 
 import QtQuick 2.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Content 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.ListItems 1.3 as ListItem
+import Lomiri.Components.Popups 1.3
+import Lomiri.Content 1.3
 
 ActionSelectionPopover {
     id: root

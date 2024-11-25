@@ -1,3 +1,7 @@
+RUN clickable build --arch arm64
+
+
+
 ttrss
 ==========
 
